@@ -9,7 +9,7 @@ join
 (select department, max(birthdate) dd
 from `hr data` group by department)subb
 on h.department=subb.department 
-where h.birthdate = dd or h.birthdate = d
+where h.birthdate = sub.dd or h.birthdate = sub.d
 ORDER BY department; 
 
 -- 3. what is the break down of empyloyee by jobtitle wise
